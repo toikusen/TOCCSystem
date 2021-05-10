@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TOCCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Visitor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pat_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MedRec_no" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Bed_no" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Reserve_date" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id_no" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone_num" Type="int" Nullable="false" />
+    <Property Name="Identity" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Travel_history" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Occupation" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contact_history" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cluster" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Expiry_date" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Evaluation_item" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TOCCModelStoreContainer">
+    <EntitySet Name="Visitor" EntityType="Self.Visitor" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TOCCModelStoreContainer" CdmEntityContainer="TOCCEntities">
+    <EntitySetMapping Name="Visitor">
+      <EntityTypeMapping TypeName="TOCCModel.Visitor">
+        <MappingFragment StoreEntitySet="Visitor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Pat_name" ColumnName="Pat_name" />
+          <ScalarProperty Name="MedRec_no" ColumnName="MedRec_no" />
+          <ScalarProperty Name="Bed_no" ColumnName="Bed_no" />
+          <ScalarProperty Name="Reserve_date" ColumnName="Reserve_date" />
+          <ScalarProperty Name="Id_no" ColumnName="Id_no" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phone_num" ColumnName="Phone_num" />
+          <ScalarProperty Name="Identity" ColumnName="Identity" />
+          <ScalarProperty Name="Travel_history" ColumnName="Travel_history" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="Contact_history" ColumnName="Contact_history" />
+          <ScalarProperty Name="Cluster" ColumnName="Cluster" />
+          <ScalarProperty Name="Expiry_date" ColumnName="Expiry_date" />
+          <ScalarProperty Name="Evaluation_item" ColumnName="Evaluation_item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

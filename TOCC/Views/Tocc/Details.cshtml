@@ -1,0 +1,130 @@
+﻿@model TOCC.Models.Visitor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Visitor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pat_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pat_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedRec_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedRec_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bed_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bed_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reserve_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reserve_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone_num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone_num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Identity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Identity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Travel_history)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Travel_history)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Occupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Occupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact_history)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact_history)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cluster)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cluster)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Expiry_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Expiry_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Evaluation_item)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Evaluation_item)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

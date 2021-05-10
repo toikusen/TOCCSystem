@@ -1,0 +1,111 @@
+﻿@model IEnumerable<TOCC.Models.Visitor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 align="center">訪客登記資料</h2>
+
+<p>
+    @Html.ActionLink("新建訪客資料", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pat_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedRec_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bed_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reserve_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Identity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Travel_history)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Occupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact_history)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cluster)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Expiry_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Evaluation_item)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pat_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedRec_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bed_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reserve_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Identity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Travel_history)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Occupation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact_history)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cluster)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Expiry_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Evaluation_item)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

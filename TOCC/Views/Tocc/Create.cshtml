@@ -1,0 +1,209 @@
+﻿@model TOCC.Models.Visitor
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2 align="center">訪客預約/登記</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <p class="bg-danger" style="font-size:26px;">每個欄位皆為必填</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="bg-success" style="font-size:26px;">住院親友資料填寫</p>
+        </div>
+    </div>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Pat_name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Pat_name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Pat_name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MedRec_no, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.MedRec_no, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.MedRec_no, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Bed_no, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Bed_no, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Bed_no, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Reserve_date, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <input name="Reserve_date" type="date" id="datepicker" class="form-control" />
+            @*@Html.EditorFor(model => model.Reserve_date, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.ValidationMessageFor(model => model.Reserve_date, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <p class="bg-success" style="font-size:26px;">訪客個人資料填寫</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Id_no, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Id_no, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Id_no, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Phone_num, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Phone_num, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Phone_num, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <p style="font-size:26px; background-color:antiquewhite">身份</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Identity, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+
+            @*<table>
+            <tr>
+                <td>
+                    <input id="家人" type="radio" name="radio" value="家人" />
+                    <label for="家人">家人</label>
+                </td>
+                <td>
+                    <input id="朋友" type="radio" name="radio" value="朋友" />
+                    <label for="朋友">朋友</label>
+                </td>
+                <td>
+                    <input id="合約照服員" type="radio" name="radio" value="合約照服員" />
+                    <label for="合約照服員">合約照服員</label>
+                </td>
+            </tr>
+        </table>*@
+            @Html.EditorFor(model => model.Identity, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Identity, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <p style="font-size:26px; background-color:antiquewhite">Travel history旅遊史</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Travel_history, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Travel_history, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Travel_history, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <p style="font-size:26px; background-color:antiquewhite">Occupation職業別</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Occupation, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Occupation, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Occupation, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <p style="font-size:26px; background-color:antiquewhite">Contact history接觸史</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Contact_history, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Contact_history, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Contact_history, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <p style="font-size:26px; background-color:antiquewhite">Cluster是否群聚</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Cluster, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Cluster, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Cluster, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Expiry_date, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Expiry_date, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Expiry_date, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Evaluation_item, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Evaluation_item, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Evaluation_item, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="確認預約" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("預約資料頁面（照理說訪客不能點，為了方便先放著）", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
